@@ -38,7 +38,7 @@ const SpareParts = () => {
       compatibility: ["BMW 3 Series", "Audi A4"],
       warranty: "2 years",
       listedDate: "2025-07-10",
-      image: "https://images.unsplash.com/photo-1622209233601-c02e01a4e9d0?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/9207748/pexels-photo-9207748.jpeg?_gl=1*143dh1k*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYyNjgwJGo0MiRsMCRoMA.."
     },
     {
       id: 2,
@@ -53,7 +53,7 @@ const SpareParts = () => {
       compatibility: ["Toyota Camry", "Honda Accord"],
       warranty: "1 year",
       listedDate: "2025-07-12",
-      image: "https://images.unsplash.com/photo-1581091012184-6e2b298e7b2f?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/4517069/pexels-photo-4517069.jpeg?_gl=1*121gh3v*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYyODI5JGo0MCRsMCRoMA.."
     },
     {
       id: 3,
@@ -68,7 +68,7 @@ const SpareParts = () => {
       compatibility: ["Mercedes C-Class", "Tesla Model 3"],
       warranty: "18 months",
       listedDate: "2025-07-08",
-      image: "https://images.unsplash.com/photo-1605552815524-ed2f786a0bd6?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/17156135/pexels-photo-17156135.jpeg?_gl=1*gsf4ve*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYyODk3JGozNyRsMCRoMA.."
     },
     {
       id: 4,
@@ -83,7 +83,7 @@ const SpareParts = () => {
       compatibility: ["BMW 3 Series", "Toyota Camry"],
       warranty: "1 year",
       listedDate: "2025-07-15",
-      image: "https://images.unsplash.com/photo-1593949447042-6b1d1e2c0e1e?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/4489765/pexels-photo-4489765.jpeg?_gl=1*hxyp7i*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYyOTU3JGo0MSRsMCRoMA.."
     },
     {
       id: 5,
@@ -128,7 +128,7 @@ const SpareParts = () => {
       compatibility: ["BMW 3 Series", "Audi A4"],
       warranty: "2 years",
       listedDate: "2025-07-11",
-      image: "https://images.unsplash.com/photo-1605552815524-ed2f786a0bd6?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/10392244/pexels-photo-10392244.jpeg?_gl=1*16i3vff*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYxNzk4JGo2JGwwJGgw"
     },
     {
       id: 8,
@@ -143,7 +143,7 @@ const SpareParts = () => {
       compatibility: ["Toyota Camry", "Honda Accord"],
       warranty: "1 year",
       listedDate: "2025-07-09",
-      image: "https://images.unsplash.com/photo-1593949447042-6b1d1e2c0e1e?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/16234303/pexels-photo-16234303.jpeg?_gl=1*14b61s8*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYxOTc0JGozOSRsMCRoMA.."
     },
     {
       id: 9,
@@ -158,7 +158,7 @@ const SpareParts = () => {
       compatibility: ["Tesla Model 3", "Mercedes C-Class"],
       warranty: "3 years",
       listedDate: "2025-07-13",
-      image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/13065689/pexels-photo-13065689.jpeg?_gl=1*hdm1f0*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYyNTU0JGoyMCRsMCRoMA.."
     },
     {
       id: 10,
@@ -173,7 +173,7 @@ const SpareParts = () => {
       compatibility: ["Honda Accord", "Toyota Camry"],
       warranty: "1 year",
       listedDate: "2025-07-07",
-      image: "https://images.unsplash.com/photo-1622209233601-c02e01a4e9d0?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/31501021/pexels-photo-31501021.jpeg?_gl=1*yvu9ub*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYyNDQxJGo1NCRsMCRoMA.."
     },
     {
       id: 11,
@@ -188,7 +188,7 @@ const SpareParts = () => {
       compatibility: ["BMW 3 Series", "Audi A4"],
       warranty: "18 months",
       listedDate: "2025-07-06",
-      image: "https://images.unsplash.com/photo-1581091012184-6e2b298e7b2f?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/5308205/pexels-photo-5308205.jpeg?_gl=1*evcrq*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYyMjg1JGozMiRsMCRoMA.."
     },
     {
       id: 12,
@@ -203,7 +203,7 @@ const SpareParts = () => {
       compatibility: ["Mercedes C-Class", "Tesla Model 3"],
       warranty: "2 years",
       listedDate: "2025-07-16",
-      image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/8722964/pexels-photo-8722964.jpeg?_gl=1*h3nq60*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYyMTc0JGozMCRsMCRoMA.."
     }
   ];
 
@@ -423,7 +423,7 @@ const SpareParts = () => {
             </div>
             <div className="flex justify-center animate-section">
               <img
-                src="https://images.unsplash.com/photo-1622209233601-c02e01a4e9d0?w=600&h=400&fit=crop"
+                src="https://images.pexels.com/photos/3642618/pexels-photo-3642618.jpeg?_gl=1*p1jsw9*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYxNjc1JGozOSRsMCRoMA.."
                 alt="Car brake disc"
                 className="max-w-xs sm:max-w-sm md:max-w-md rounded-lg shadow-lg"
                 loading="lazy"

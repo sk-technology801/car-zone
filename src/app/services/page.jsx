@@ -32,7 +32,7 @@ const Service = () => {
       rating: 4.7,
       location: "New York",
       duration: "30 mins",
-      image: "https://images.unsplash.com/photo-1622209233601-c02e01a4e9d0?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/13065697/pexels-photo-13065697.jpeg?_gl=1*1dp7327*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYwNjI1JGo0OSRsMCRoMA.."
     },
     {
       id: 2,
@@ -43,7 +43,7 @@ const Service = () => {
       rating: 4.5,
       location: "California",
       duration: "20 mins",
-      image: "https://images.unsplash.com/photo-1581091012184-6e2b298e7b2f?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?_gl=1*79gmbw*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYwNzI0JGozMCRsMCRoMA.."
     },
     {
       id: 3,
@@ -54,7 +54,7 @@ const Service = () => {
       rating: 4.8,
       location: "Texas",
       duration: "1 hr",
-      image: "https://images.unsplash.com/photo-1605552815524-ed2f786a0bd6?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/30470930/pexels-photo-30470930.jpeg?_gl=1*1r5q2n8*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYwNzkwJGo0MyRsMCRoMA.."
     },
     {
       id: 4,
@@ -65,7 +65,7 @@ const Service = () => {
       rating: 4.6,
       location: "Florida",
       duration: "45 mins",
-      image: "https://images.unsplash.com/photo-1593949447042-6b1d1e2c0e1e?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/33030931/pexels-photo-33030931.jpeg?_gl=1*i6vtms*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYwOTQ1JGo1OSRsMCRoMA.."
     },
     {
       id: 5,
@@ -76,7 +76,7 @@ const Service = () => {
       rating: 4.9,
       location: "Chicago",
       duration: "30 mins",
-      image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/4489765/pexels-photo-4489765.jpeg?_gl=1*c1fwm4*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYxMDA3JGo1OSRsMCRoMA.."
     },
     {
       id: 6,
@@ -87,7 +87,7 @@ const Service = () => {
       rating: 4.4,
       location: "Seattle",
       duration: "1.5 hrs",
-      image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/1409999/pexels-photo-1409999.jpeg?_gl=1*9hhn63*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYxMTMxJGoxNCRsMCRoMA.."
     },
     {
       id: 7,
@@ -131,7 +131,7 @@ const Service = () => {
       rating: 4.9,
       location: "Phoenix",
       duration: "3 hrs",
-      image: "https://images.unsplash.com/photo-1622209233601-c02e01a4e9d0?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg?_gl=1*1yble5d*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYxMjU4JGoxMCRsMCRoMA.."
     },
     {
       id: 11,
@@ -142,7 +142,7 @@ const Service = () => {
       rating: 4.5,
       location: "Atlanta",
       duration: "1 hr",
-      image: "https://images.unsplash.com/photo-1581091012184-6e2b298e7b2f?w=400&h=250&fit=crop"
+      image: "https://images.pexels.com/photos/9607353/pexels-photo-9607353.jpeg?_gl=1*n5bbun*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYxMzY3JGozMCRsMCRoMA.."
     },
     {
       id: 12,
@@ -343,7 +343,7 @@ const Service = () => {
             </div>
             <div className="flex justify-center animate-section">
               <img
-                src="https://images.unsplash.com/photo-1517524008697-4bbe05c9b2a2?w=600&h=400&fit=crop"
+                src="https://images.pexels.com/photos/13065689/pexels-photo-13065689.jpeg?_gl=1*1cxxxoy*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYxNTc0JGozNCRsMCRoMA.."
                 alt="Car being serviced"
                 className="max-w-xs sm:max-w-sm md:max-w-md rounded-lg shadow-lg"
                 loading="lazy"

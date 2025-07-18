@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation';
 import { Carousel } from 'react-responsive-carousel';
 import Tilt from 'react-parallax-tilt';
 import { motion, useAnimation, useScroll, useTransform } from 'framer-motion';
-import { useSpring, animated } from '@react spring/web';
 import GlobeComponent from 'react-globe.gl';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
@@ -87,29 +86,29 @@ const About = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  // Flip card animation
+  // Flip card animation with framer-motion
   const FlipCard = ({ front, back, icon: Icon }) => {
-    const [props, set] = useSpring(() => ({
-      transform: 'rotateY(0deg)',
-      config: { tension: 300, friction: 30 },
-    }));
-
     return (
-      <animated.div
-        style={props}
-        onMouseEnter={() => set({ transform: 'rotateY(180deg)' })}
-        onMouseLeave={() => set({ transform: 'rotateY(0deg)' })}
+      <motion.div
         className="relative h-48 w-full perspective-1000"
+        whileHover={{ rotateY: 180 }}
+        transition={{ duration: 0.6 }}
       >
-        <div className="absolute w-full h-full backface-hidden bg-gray-800 rounded-xl p-6 glassmorphism hover-lift">
+        <motion.div
+          className="absolute w-full h-full bg-gray-800 rounded-xl p-6 glassmorphism hover-lift"
+          style={{ backfaceVisibility: 'hidden' }}
+        >
           <Icon className="h-8 w-8 text-blue-400 mb-4" aria-hidden="true" />
           <h3 className="text-lg font-semibold text-white mb-2">{front.title}</h3>
           <p className="text-gray-400 text-sm">{front.description}</p>
-        </div>
-        <div className="absolute w-full h-full backface-hidden bg-gray-800 rounded-xl p-6 glassmorphism transform rotate-y-180">
+        </motion.div>
+        <motion.div
+          className="absolute w-full h-full bg-gray-800 rounded-xl p-6 glassmorphism"
+          style={{ backfaceVisibility: 'hidden', rotateY: 180 }}
+        >
           <p className="text-gray-300 text-sm">{back.details}</p>
-        </div>
-      </animated.div>
+        </motion.div>
+      </motion.div>
     );
   };
 
@@ -198,12 +197,6 @@ const About = () => {
         .perspective-1000 {
           perspective: 1000px;
         }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
       `}</style>
 
       {/* Hero Section with Parallax and Particles */}
@@ -247,7 +240,7 @@ const About = () => {
                 className="rounded-lg shadow-lg"
               >
                 {[
-                  { src: "https://images.unsplash.com/photo-1517524008697-4bbe05c9b2a2?w=600&h=400&fit=crop", alt: "AutoHub Workshop", caption: "State-of-the-art facilities" },
+                  { src: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=400&fit=crop", alt: "AutoHub Workshop", caption: "State-of-the-art facilities" },
                   { src: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600&h=400&fit=crop", alt: "AutoHub Team", caption: "Our dedicated team" },
                   { src: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=400&fit=crop", alt: "AutoHub Innovation", caption: "Innovative solutions" }
                 ].map((img, idx) => (
@@ -270,43 +263,7 @@ const About = () => {
       </section>
 
       {/* Company Story Section with Enhanced Timeline */}
-      <section id="story" className="py-12 sm:py-16 bg-gray-900 animate-section" aria-labelledby="story-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="story-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center">
-            Our Journey
-          </h2>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-500 to-purple-600 h-full"></div>
-            {[
-              { year: 2015, title: "Idea Sparked", description: "AutoHub began as a vision to connect car enthusiasts.", details: "Founded by a group of automotive passionates in a small garage." },
-              { year: 2018, title: "Official Launch", description: "AutoHub marketplace went live with car trading.", details: "Introduced buy and sell platforms with 100+ listings." },
-              { year: 2020, title: "Spare Parts Expansion", description: "Added spare parts marketplace to our platform.", details: "Partnered with 50+ suppliers for quality parts." },
-              { year: 2022, title: "Service Platform", description: "Launched premium automotive services.", details: "Collaborated with top-tier service providers across 10 states." },
-              { year: 2024, title: "Global Expansion", description: "Expanded to 15 countries, serving 50,000+ users.", details: "Introduced multilingual support and global logistics." },
-              { year: 2025, title: "Tech Innovation", description: "Integrated AI-driven recommendations.", details: "Launched AI tools for personalized user experiences." }
-            ].map((milestone, idx) => (
-              <motion.div
-                key={idx}
-                custom={idx}
-                initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
-                animate={controls}
-                whileHover={{ scale: 1.05 }}
-                className={`timeline-item flex items-center mb-8 ${idx % 2 === 0 ? 'justify-start' : 'justify-end'}`}
-              >
-                <div className={`w-5/12 ${idx % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                  <h3 className="text-xl font-semibold text-white">{milestone.year}: {milestone.title}</h3>
-                  <p className="text-gray-400">{milestone.description}</p>
-                  <p className="text-gray-500 text-sm mt-2">{milestone.details}</p>
-                </div>
-                <div className="w-2/12 flex justify-center">
-                  <div className="bg-blue-600 w-4 h-4 rounded-full border-2 border-gray-900"></div>
-                </div>
-                <div className="w-5/12"></div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Team Section with Interactive Globe */}
       <section className="py-12 sm:py-16 bg-gray-900 animate-section" aria-labelledby="team-heading">
@@ -548,62 +505,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 py-8 sm:py-12" role="contentinfo">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-1.5 sm:p-2 rounded-lg">
-                  <Wrench className="h-5 w-5 sm:h-6 sm:w-6 text-white" aria-hidden="true" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold">AutoHub</h3>
-              </div>
-              <p className="text-gray-400 text-sm sm:text-base">Your trusted marketplace for buying, selling, and finding automotive services and parts.</p>
-            </div>
-            <div>
-              <h4 className="text-base sm:text-lg font-semibold mb-4 text-white">Quick Links</h4>
-              <ul className="space-y-2 text-gray-400 text-sm sm:text-base" role="navigation">
-                <li><Link href="/" className="hover:text-white transition-colors duration-300" aria-current={pathname === '/' ? 'page' : undefined}>Home</Link></li>
-                <li><Link href="/buy-cars" className="hover:text-white transition-colors duration-300" aria-current={pathname === '/buy-cars' ? 'page' : undefined}>Buy Cars</Link></li>
-                <li><Link href="/sell-cars" className="hover:text-white transition-colors duration-300" aria-current={pathname === '/sell-cars' ? 'page' : undefined}>Sell Cars</Link></li>
-                <li><Link href="/spare-parts" className="hover:text-white transition-colors duration-300" aria-current={pathname === '/spare-parts' ? 'page' : undefined}>Spare Parts</Link></li>
-                <li><Link href="/service" className="hover:text-white transition-colors duration-300" aria-current={pathname === '/service' ? 'page' : undefined}>Services</Link></li>
-                <li><Link href="/about" className="hover:text-white transition-colors duration-300" aria-current={pathname === '/about' ? 'page' : undefined}>About</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-base sm:text-lg font-semibold mb-4 text-white">Categories</h4>
-              <ul className="space-y-2 text-gray-400 text-sm sm:text-base" role="navigation">
-                <li><Link href="/categories/suvs" className="hover:text-white transition-colors duration-300">SUVs</Link></li>
-                <li><Link href="/categories/sedans" className="hover:text-white transition-colors duration-300">Sedans</Link></li>
-                <li><Link href="/categories/trucks" className="hover:text-white transition-colors duration-300">Trucks</Link></li>
-                <li><Link href="/categories/electric" className="hover:text-white transition-colors duration-300">Electric</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-base sm:text-lg font-semibold mb-4 text-white">Contact</h4>
-              <div className="space-y-2 text-gray-400 text-sm sm:text-base">
-                <div className="flex items-center">
-                  <span className="h-4 w-4 mr-2">📞</span>
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="h-4 w-4 mr-2">📧</span>
-                  <span>info@autohub.com</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="h-4 w-4 mr-2" aria-hidden="true" />
-                  <span>123 Auto Street, Car City</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-400 text-sm">
-            <p>© 2025 AutoHub. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 };

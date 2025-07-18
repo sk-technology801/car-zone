@@ -76,7 +76,7 @@ const BuyCars = () => {
       year: 2023,
       price: 48000,
       mileage: 15000,
-      image: "https://images.unsplash.com/photo-1560363199-09a6e38e88d6?w=400&h=250&fit=crop",
+      image: "https://images.pexels.com/photos/30479291/pexels-photo-30479291.jpeg?_gl=1*plbgo7*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTI4NjA2MTQkbzMxJGcxJHQxNzUyODYzMTYzJGoyMCRsMCRoMA..",
       rating: 4.9,
       location: "Florida",
       fuel: "Electric",
