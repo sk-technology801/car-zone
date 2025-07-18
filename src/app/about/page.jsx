@@ -1,16 +1,20 @@
 
 "use client"
 import React, { useEffect, useState, useRef } from 'react';
-import { Wrench, MapPin, Users, Target, Star, Globe, Twitter, Linkedin, MessageSquare, ChevronDown, ChevronUp } from 'lucide-react';
+import { Wrench, MapPin, Users, Target, Star, Twitter, Linkedin, MessageSquare, ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Carousel } from 'react-responsive-carousel';
-import Tilt from 'react-parallax-tilt';
 import { motion, useAnimation, useScroll, useTransform } from 'framer-motion';
-import GlobeComponent from 'react-globe.gl';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+import dynamic from 'next/dynamic';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Footer from '../components/Footer';
+
+// Dynamically import components to avoid SSR issues
+const Particles = dynamic(() => import('react-tsparticles'), { ssr: false });
+const Tilt = dynamic(() => import('react-parallax-tilt'), { ssr: false });
+const GlobeComponent = dynamic(() => import('react-globe.gl'), { ssr: false });
+const { init } = dynamic(() => import('@tsparticles/engine'), { ssr: false });
 
 const About = () => {
   const pathname = usePathname();
@@ -24,8 +28,8 @@ const About = () => {
   const yParallax = useTransform(scrollY, [0, 300], [0, -100]);
 
   // Initialize particles
-  const particlesInit = async (main) => {
-    await loadFull(main);
+  const particlesInit = async (engine) => {
+    await init(engine);
   };
 
   // Handle scroll animations
@@ -263,7 +267,34 @@ const About = () => {
       </section>
 
       {/* Company Story Section with Enhanced Timeline */}
-     
+      <section id="story" className="py-12 sm:py-16 bg-gray-900 animate-section" aria-labelledby="story-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="story-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+            Our Story
+          </h2>
+          <div className="space-y-8">
+            {[
+              { year: "2015", event: "AutoHub Founded", description: "Started as a small automotive marketplace." },
+              { year: "2018", event: "Global Expansion", description: "Expanded to 5 countries with new services." },
+              { year: "2023", event: "AI Integration", description: "Introduced AI-driven car recommendations." },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="timeline-item flex items-center"
+                custom={idx}
+                initial={{ opacity: 0, x: -50 }}
+                animate={controls}
+              >
+                <div className="flex-shrink-0 w-24 text-blue-400 font-semibold">{item.year}</div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-white">{item.event}</h3>
+                  <p className="text-gray-400 text-sm">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Team Section with Interactive Globe */}
       <section className="py-12 sm:py-16 bg-gray-900 animate-section" aria-labelledby="team-heading">
@@ -505,7 +536,8 @@ const About = () => {
         </div>
       </section>
 
-      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
